@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-rail-950 text-rail-100 font-body antialiased;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(201, 162, 75, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(31, 122, 77, 0.06), transparent 45%);
+}
+
+.pnr-digits {
+  @apply font-mono tracking-[0.18em];
+}
+
+.ledger-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    theme('colors.rail.700') 0,
+    theme('colors.rail.700') 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+::selection {
+  background: rgba(201, 162, 75, 0.35);
+}
